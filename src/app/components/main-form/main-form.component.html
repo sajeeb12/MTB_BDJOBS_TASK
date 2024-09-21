@@ -1,0 +1,73 @@
+<div class="">
+    <div class=" w-full shadow-lg shadow-red-500 p-8 grid grid-cols-12">
+        <div class="col-span-7">
+        </div>
+        <div class="col-span-5 bg-white text-left ">
+            <form action="" [formGroup]="personForm">
+                <fieldset class="border border-black p-4">
+                    <legend class="text-x font-bold  text-black px-2">Sign in</legend>
+                    <div>
+                        <label for="loginId" class="block text-black mb-2 font-bold">
+                            Login Id
+                             <span class="text-green-600 text-x">*</span>
+                        </label>
+                        <input type="text" formControlName="loginId" id="loginId" name="loginId"
+                            class="border border-gray-800 rounded p-2 w-full mb-4">
+
+                        
+                        <div class="text-red-500">
+                            @if (personForm.controls['loginId'].touched && personForm.controls['loginId'].errors?.['required'])
+                            {
+                                <span>Please type your Login Id</span>
+
+                            }
+                            @else if (personForm.controls['loginId'].touched && personForm.controls['loginId'].errors?.['minlength'])
+                            {
+                                <span>Login Id must be at least 4 character</span>
+                            }
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="pass" class="block text-black mb-2 font-bold">
+                            Password <span class="text-green-600 text-base">*</span>
+                        </label>
+                        <input type="password" formControlName="pass"  id="pass" name="pass"
+                            class="border border-gray-800 rounded p-2 w-full mb-4">
+
+                        <div class="text-red-500">
+                            @if (personForm.controls['pass'].touched && personForm.controls['pass'].errors?.['required'])
+                            {
+                                <span>Please type your Password</span>
+                        
+                            }
+                            @else if
+                            (personForm.controls['pass'].touched && personForm.controls['pass'].errors?.['minlength'])
+                            {
+                                <span>Password must be at least 4 character</span>
+                            }
+                        
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-green-700 text-sm font-semibold text-right">
+                            Forgot Login ID/ Password ?>
+                        </p>
+                    </div>
+                    <div class=" mt-2 flex justify-center ">
+                        <button
+                            class="px-6 py-2 bg-green-600 text-white font-bold
+                            text-center border-b-4 border-red-600" type="button" (click)="onSave()">
+                            Sign In
+                        </button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</div>
