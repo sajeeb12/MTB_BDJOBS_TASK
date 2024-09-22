@@ -53,14 +53,15 @@
                     </div>
 
                     <div>
-                        <p class="text-green-700 text-sm font-semibold text-right">
+                        <p class="text-green-700 text-sm font-semibold text-end cursor-pointer" (click)="redirectToForget()">
                             Forgot Login ID/ Password ?>
                         </p>
                     </div>
                     <div class=" mt-2 flex justify-center ">
                         <button
                             class="px-6 py-2 bg-green-600 text-white font-bold
-                            text-center border-b-4 border-red-600" type="button" (click)="onSave()">
+                            text-center border-b-4 border-red-600"
+                             type="button" (click)="onSave()">
                             Sign In
                         </button>
                     </div>

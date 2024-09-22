@@ -5,10 +5,11 @@ import { ForgetPassComponent } from './components/forget-pass/forget-pass.compon
 import { ForgetMainComponent } from './components/forget-main/forget-main.component';
 import { MainComponent } from './components/main/main.component';
 import { InstructionLayoutComponent } from './components/instruction-layout/instruction-layout.component';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
     {
-        path:'',
+        path:'login',
         component:MainComponent
     },
     
@@ -23,7 +24,7 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: '',
+        redirectTo: 'login',
         pathMatch: 'full'
-    }
+    },
 ];
