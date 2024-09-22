@@ -6,6 +6,7 @@ import { ForgetMainComponent } from './components/forget-main/forget-main.compon
 import { MainComponent } from './components/main/main.component';
 import { InstructionLayoutComponent } from './components/instruction-layout/instruction-layout.component';
 import { AppComponent } from './app.component';
+import { authGuard } from './service/auth.guard';
 
 export const routes: Routes = [
     {
@@ -15,7 +16,8 @@ export const routes: Routes = [
     
     {
         path:'instruction',
-        component:InstructionLayoutComponent
+        component:InstructionLayoutComponent,
+        canActivate:[authGuard]
     },
 
     {
