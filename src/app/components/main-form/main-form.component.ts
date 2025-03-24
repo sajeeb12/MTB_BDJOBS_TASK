@@ -17,7 +17,7 @@ export class MainFormComponent {
     loginId:new FormControl('',[Validators.required,Validators.minLength(4)]),
     pass:new FormControl('',[Validators.required,Validators.minLength(4)])
   })
-  initializedLoginId = '112233';
+  initializedLoginId = '1234';
   initializedPass = '1234'
 
   formValue:any;
