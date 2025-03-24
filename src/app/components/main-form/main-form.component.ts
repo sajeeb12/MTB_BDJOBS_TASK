@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class MainFormComponent {
   router = inject(Router);
+
+  
   personForm:FormGroup = new FormGroup({
     loginId:new FormControl('',[Validators.required,Validators.minLength(4)]),
     pass:new FormControl('',[Validators.required,Validators.minLength(4)])
